@@ -5,8 +5,18 @@ import {
 import './App.scss';
 import Colors from './Colors';
 import Counter from './Counter';
+import Photo from './Photo';
+import Gallery from './Gallery';
+import Multibutton from './Multibutton';
+import Instagram from './Instagram';
 
-const menu = ['home', 'color', 'counter'];
+const menu = ['home',
+ 'color',
+  'counter', 
+  'photo',
+  'gallery',
+ 'multibutton',
+'instagram'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -40,7 +50,10 @@ class App extends React.Component {
           <Route exact path="/home" component={Home} />
           <Route exact path="/color" component={Color} />
           <Route exact path="/counter" component={Counter} />
-
+          <Route exact path="/photo" component={Photo} />
+          <Route exact path="/gallery" component={Gallery} />
+          <Route exact path="/multibutton" component={Multibutton} />
+          <Route exact path="/instagram" component={Instagram} />
         </Switch>
       </BrowserRouter>
 

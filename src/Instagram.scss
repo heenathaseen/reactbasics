@@ -1,0 +1,51 @@
+.instagram{
+    margin: 100px 0px 0px 100px;
+    .name{
+        
+        width: 500px;
+        border-top: 1px solid gainsboro; 
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        p{
+            font-weight: bold;
+        }
+     
+        img{
+            border-radius: 50%;
+            
+            }
+        i{
+            padding-top: 15px;
+        }
+       
+    }
+    .icons{
+        margin: 10px 0px;
+        width: 500px;
+        border-bottom: 1px solid gainsboro; 
+         button{
+             border: none;
+             background-color: white;
+
+             
+         }
+         button::after{
+             i{
+                 background-color: red;
+             }
+         }
+         
+        i{  font-size: 25px;
+            padding-right: 20px;
+        }
+        display: grid;
+        grid-template-columns:  4fr 1fr;
+        span{
+            font-weight: normal;
+        }
+
+       
+    }
+    
+    
+}
