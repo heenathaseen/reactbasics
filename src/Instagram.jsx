@@ -7,13 +7,14 @@ import profile from './Images/profile.jpg';
 class Instagram extends React.Component {
     state = {
         like:0,
-    
+         heart:false
 
     }
     increment = ()=>this.setState(({like})=>({like: like + 1}));
+    show = () => this.setState(({ heart })=>({heart: !heart}));
     
   render() {
-    const {like} = this.state;
+    const {like,heart} = this.state;
     return (
        
       <div className="instagram">
@@ -32,7 +33,7 @@ class Instagram extends React.Component {
         </div>
         <div className="icons">
           <div>
-            <button type="button" className="heart" onClick={this.increment}> <i className="fa fa-heart-o" aria-hidden="true" /> <p>{like}likes</p></button>
+    <button type="button"  onClick={()=>{this.increment();this.show();}}> {heart ? <i className="fa fa-heart" aria-hidden="true" />:<i class="fa fa-heart-o" aria-hidden="true"></i>} <p>{like}likes</p></button>
            
             <button type="button"> <i className="fa fa-comment-o" aria-hidden="true" /></button>
             <button type="button"> <i className="fa fa-share" aria-hidden="true" /></button>
