@@ -12,7 +12,7 @@ class Photo extends React.Component {
         <button type="button" onClick={this.showPhoto}>
    {photoDisplay ? "Hide Photo":"Show Photo"}
 </button>   
-{photoDisplay && ( <img src="https://placeimg.com/1200/500/girl" alt="" /> )}
+{photoDisplay && ( <img src="https://placeimg.com/1200/500/cycle" alt="" /> )}
    </div>
 
     );
