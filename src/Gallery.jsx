@@ -1,69 +1,75 @@
-import React, { Component } from "react";
-import "./Gallery.scss";
-import Mountain from "./Images/mountain.jpg";
-import Nature from "./Images/nature.jpg";
-import King from "./Images/king.jpg";
-import Chess from "./Images/chess.jpg";
-import Rocket from "./Images/rocket.jpg";
-import Beach from "./Images/beach.jpg";
+import React, { Component } from 'react';
+import './Gallery.scss';
+import Mountain from './Images/mountain.jpg';
+import Nature from './Images/nature.jpg';
+import King from './Images/king.jpg';
+import Chess from './Images/chess.jpg';
+import Rocket from './Images/rocket.jpg';
+import Beach from './Images/beach.jpg';
 
-class MainGallery extends Component {
+class Maingallery extends Component {
   imageSwitch(title) {
     switch (title) {
-      case "mountain":
-        return <img src={Mountain} alt="" />;
-      case "nature":
-        return <img src={Nature} alt="" />;
-      case "king":
+      case 'king':
         return <img src={King} alt="" />;
-      case "chess":
+      case 'nature':
+        return <img src={Nature} alt="" />;
+
+      case 'chess':
         return <img src={Chess} alt="" />;
-      case "rocket":
-        return <img src={Rocket} alt="" />;
-      case "beach":
+
+      case 'beach':
         return <img src={Beach} alt="" />;
+      case 'mountain':
+        return <img src={Mountain} alt="" />;
+      case 'rocket':
+        return <img src={Rocket} alt="" />;
       default:
-        return <img src="https://placeimg.com/1000/400/random" alt="" />;
+        return <img src="https://placeimg.com/1000/400/bird" alt="" />;
     }
   }
 
   render() {
     const { content } = this.props;
     return (
-      <div className="main-gallery">
-        <h2>{content}</h2>
+      <div className="name"> 
+        <h1>{content}</h1>
         {this.imageSwitch(content)}
       </div>
     );
   }
 }
-
-class OptionsGallery extends Component {
-  imageSwitch(title, chaal) {
+class Optiongallery extends Component {
+  imageSwitch(title,temp) {
     switch (title) {
-      case "mountain":
-        return <img src={Mountain} onClick={() => chaal(title)} alt="" />;
-      case "nature":
-        return <img src={Nature} onClick={() => chaal(title)} alt="" />;
-      case "king":
-        return <img src={King} onClick={() => chaal(title)} alt="" />;
-      case "chess":
-        return <img src={Chess} onClick={() => chaal(title)} alt="" />;
-      case "rocket":
-        return <img src={Rocket} onClick={() => chaal(title)} alt="" />;
-      case "beach":
-        return <img src={Beach} onClick={() => chaal(title)} alt="" />;
+      case 'king':
+        return <img src={King} onClick={() => temp(title)} alt="" />;
+      case 'nature':
+        return <img src={Nature} onClick={() => temp(title)} alt="" />;
+
+      case 'chess':
+        return <img src={Chess} onClick={() => temp(title)} alt="" />;
+
+      case 'beach':
+        return <img src={Beach} onClick={() => temp(title)} alt="" />;
+      case 'mountain':
+        return <img src={Mountain} onClick={() => temp(title)} alt="" />;
+      case 'rocket':
+        return <img src={Rocket} onClick={() => temp(title)} alt="" />;
       default:
-        return <img src="https://placeimg.com/1000/400/random" alt="" />;
+        return <img src="https://placeimg.com/1000/400/bird" alt="" />;
     }
   }
 
   render() {
-    const { title, chaal } = this.props;
-    return this.imageSwitch(title, chaal);
+    const { title,temp} = this.props;
+    return (
+
+      this.imageSwitch(title,temp)
+
+    );
   }
 }
-
 class Gallery extends Component {
   state = {
     gallerySelected: "Hey"
@@ -75,18 +81,19 @@ class Gallery extends Component {
     const { gallerySelected } = this.state;
     return (
       <div className="gallery">
-        <MainGallery content={gallerySelected} />
+        <Maingallery content={gallerySelected} />
         <div className="options-gallery">
-          <OptionsGallery title="mountain" chaal={this.changeTitle} />
-          <OptionsGallery title="nature" chaal={this.changeTitle} />
-          <OptionsGallery title="king" chaal={this.changeTitle} />
-          <OptionsGallery title="chess" chaal={this.changeTitle} />
-          <OptionsGallery title="rocket" chaal={this.changeTitle} />
-          <OptionsGallery title="beach" chaal={this.changeTitle} />
+          <Optiongallery title="mountain" temp={this.changeTitle}/>
+          <Optiongallery title="nature" temp={this.changeTitle} />
+          <Optiongallery title="king" temp={this.changeTitle} />
+          <Optiongallery title="chess" temp={this.changeTitle} />
+          <Optiongallery title="rocket" temp={this.changeTitle} />
+          <Optiongallery title="beach" temp={this.changeTitle} />
         </div>
       </div>
     );
   }
 }
+
 
 export default Gallery;
