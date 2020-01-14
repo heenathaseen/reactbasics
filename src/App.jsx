@@ -11,12 +11,12 @@ import Multibutton from './Multibutton';
 import Instagram from './Instagram';
 
 const menu = ['home',
- 'color',
-  'counter', 
+  'color',
+  'counter',
   'photo',
   'gallery',
- 'multibutton',
-'instagram'];
+  'multibutton',
+  'instagram'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
