@@ -9,12 +9,14 @@ import Photo from './Photo';
 import Gallery from './Gallery';
 import Multibutton from './Multibutton';
 import Instagram from './Instagram';
+import Gallerysec from './Gallerysec';
 
 const menu = ['home',
   'color',
   'counter',
   'photo',
-  'gallery',
+  // 'gallery',
+  'gallerysec',
   'multibutton',
   'instagram'];
 
@@ -51,7 +53,8 @@ class App extends React.Component {
           <Route exact path="/color" component={Color} />
           <Route exact path="/counter" component={Counter} />
           <Route exact path="/photo" component={Photo} />
-          <Route exact path="/gallery" component={Gallery} />
+          {/* <Route exact path="/gallery" component={Gallery} /> */}
+          <Route exact path="/gallerysec" component={Gallerysec} />
           <Route exact path="/multibutton" component={Multibutton} />
           <Route exact path="/instagram" component={Instagram} />
         </Switch>

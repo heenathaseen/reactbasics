@@ -41,7 +41,7 @@ class Maingallery extends Component {
 }
 class Optiongallery extends Component {
   imageSwitch(title,temp) {
-    switch (title) {
+    switch (title,temp) {
       case 'king':
         return <img src={King} onClick={() => temp(title)} alt="" />;
       case 'nature':
@@ -57,7 +57,7 @@ class Optiongallery extends Component {
       case 'rocket':
         return <img src={Rocket} onClick={() => temp(title)} alt="" />;
       default:
-        return <img src="https://placeimg.com/1000/400/bird" alt="" />;
+        return <img src="https://placeimg.com/1000/400/dog" alt="" />;
     }
   }
 
