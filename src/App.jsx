@@ -6,7 +6,7 @@ import './App.scss';
 import Colors from './Colors';
 import Counter from './Counter';
 import Photo from './Photo';
-import Gallery from './Gallery';
+//import Gallery from './Gallery';
 import Multibutton from './Multibutton';
 import Instagram from './Instagram';
 import Gallerysec from './Gallerysec';
