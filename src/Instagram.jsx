@@ -48,7 +48,7 @@ class Instagram extends React.Component {
           <h4>
 Ananya pande
             {' '}
-            <span>be a reason for smile</span>
+            <span>be a reason for smile....</span>
             {' '}
           </h4>
 
