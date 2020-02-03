@@ -13,6 +13,7 @@ import Gallerysec from './Gallerysec';
 import Form from './Form';
 import Fetch from './Fecth';
 import Fetcharray from './Fetcharray';
+import Githubfetch from './Githubfetch';
 
 const menu = ['home',
   'color',
@@ -24,7 +25,8 @@ const menu = ['home',
   'instagram',
   'form',
   'fetch',
-  'fetcharray'];
+  'fetcharray',
+  'githubfetch'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -66,6 +68,8 @@ class App extends React.Component {
           <Route exact path="/form" component={Form} />
           <Route exact path="/fetch" component={Fetch} />
           <Route exact path="/fetcharray" component={Fetcharray} />
+          <Route exact path="/githubfetch" component={Githubfetch} />
+
         </Switch>
       </BrowserRouter>
 
