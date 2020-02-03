@@ -11,6 +11,8 @@ import Multibutton from './Multibutton';
 import Instagram from './Instagram';
 import Gallerysec from './Gallerysec';
 import Form from './Form';
+import Fetch from './Fecth';
+import Fetcharray from './Fetcharray';
 
 const menu = ['home',
   'color',
@@ -20,7 +22,9 @@ const menu = ['home',
   'gallerysec',
   'multibutton',
   'instagram',
-  'form'];
+  'form',
+  'fetch',
+  'fetcharray'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -60,6 +64,8 @@ class App extends React.Component {
           <Route exact path="/multibutton" component={Multibutton} />
           <Route exact path="/instagram" component={Instagram} />
           <Route exact path="/form" component={Form} />
+          <Route exact path="/fetch" component={Fetch} />
+          <Route exact path="/fetcharray" component={Fetcharray} />
         </Switch>
       </BrowserRouter>
 

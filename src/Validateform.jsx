@@ -7,7 +7,7 @@ class Validateform extends Component {
     password: "",
     nameError: "",
     emailError: "",
-    passwordError: ""
+    passwordError: "",
   };
 
   handleChange = e => {
