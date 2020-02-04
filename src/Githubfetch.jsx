@@ -2,7 +2,7 @@ import React from 'react';
 import './Githubfetch.scss';
 import Linkify from 'react-linkify';
 class Githubfetch extends React.Component {
-    state={
+    state = {
         id:"",
         avatar_url:"",
         html_url:"",
