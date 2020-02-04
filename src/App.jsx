@@ -14,6 +14,8 @@ import Form from './Form';
 import Fetch from './Fecth';
 import Fetcharray from './Fetcharray';
 import Githubfetch from './Githubfetch';
+import Lifestate from './Lifestate';
+import Todo from './Todo';
 
 const menu = ['home',
   'color',
@@ -26,7 +28,9 @@ const menu = ['home',
   'form',
   'fetch',
   'fetcharray',
-  'githubfetch'];
+  'githubfetch',
+  'lifestate',
+'todo'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -69,6 +73,8 @@ class App extends React.Component {
           <Route exact path="/fetch" component={Fetch} />
           <Route exact path="/fetcharray" component={Fetcharray} />
           <Route exact path="/githubfetch" component={Githubfetch} />
+          <Route exact path="/lifestate" component={Lifestate} />
+          <Route exact path="/todo" component={Todo} />
 
         </Switch>
       </BrowserRouter>
