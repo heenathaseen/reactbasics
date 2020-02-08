@@ -1,0 +1,12 @@
+form{
+    input{
+        margin-left: 100px;
+    }
+}
+.todo-text{
+    margin-left: 100px;
+    width:300px;
+    display:grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+    
+}
