@@ -1,0 +1,9 @@
+.ls{margin-top: 50px;
+    width: 650px;
+    display: grid;
+    grid-template-columns: 2fr .5fr;
+    button{
+        margin-top: 20px;
+        width: 200px;
+    }
+}

@@ -16,6 +16,7 @@ import Fetcharray from './Fetcharray';
 import Githubfetch from './Githubfetch';
 import Lifestate from './Lifestate';
 import Todo from './Todo';
+import Localstorage from './Localstorage';
 
 const menu = ['home',
   'color',
@@ -30,7 +31,7 @@ const menu = ['home',
   'fetcharray',
   'githubfetch',
   'lifestate',
-'todo'];
+'todo','localStorage'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -75,6 +76,9 @@ class App extends React.Component {
           <Route exact path="/githubfetch" component={Githubfetch} />
           <Route exact path="/lifestate" component={Lifestate} />
           <Route exact path="/todo" component={Todo} />
+          <Route exact path="/localstorage" component={Localstorage} />
+
+          
 
         </Switch>
       </BrowserRouter>
