@@ -18,6 +18,7 @@ import Lifestate from './Lifestate';
 import Todo from './Todo';
 import Localstorage from './Localstorage';
 import Redux from './Redux';
+import Mobx from './Mobx';
 
 const menu = ['home',
   'color',
@@ -32,7 +33,10 @@ const menu = ['home',
   'fetcharray',
   'githubfetch',
   'lifestate',
-  'todo', 'localStorage', 'redux'];
+  'todo',
+  'localStorage',
+  'redux',
+  'mobx'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -79,7 +83,7 @@ class App extends React.Component {
           <Route exact path="/todo" component={Todo} />
           <Route exact path="/localstorage" component={Localstorage} />
           <Route exact path="/redux" component={Redux} />
-
+          <Route exact path="/mobx" component={Mobx} />
 
 
         </Switch>
