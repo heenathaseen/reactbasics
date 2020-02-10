@@ -52,7 +52,7 @@ class Localstorage extends React.Component {
         </div>
       </>
     );
-  }
+  } 
 }
 
 export default Localstorage;
