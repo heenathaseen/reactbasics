@@ -3,14 +3,14 @@ import "./Flipcoin.scss";
 import {
     BrowserRouter, Switch, Route, Link,
   } from 'react-router-dom';
-  class Results extends React.Component{
+//   class Results extends React.Component{
 
-      render(){
-          const{result} =this.props;
+//       render(){
+//           const{result} =this.props;
           
-      return(<p>{result}</p>);
-      }
-  }
+//       return(<p>{result}</p>);
+//       }
+//   }
 
 class Flipcoin extends React.Component {
     state = {
