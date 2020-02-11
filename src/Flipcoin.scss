@@ -1,0 +1,33 @@
+
+.flip{
+    margin: 100px 500px;
+    button{
+        background-color: black;
+        color: white;
+        border:none;
+        width: 100px;
+        height: 30px;
+        font-size: 18px;
+    }
+}
+.coin{
+
+
+
+    .head{
+        width:100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: darkmagenta;
+        position: absolute;
+        transition: ease .3s;
+        transform: rotateX(180deg);
+    }
+    .tail{
+        position: relative;
+        width:100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color:magenta;
+    }
+}
