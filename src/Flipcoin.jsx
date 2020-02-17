@@ -1,5 +1,9 @@
 import React from 'react';
 import "./Flipcoin.scss";
+import tail from './Images/tail.jpeg';
+import head from './Images/head.jpeg';
+
+
 import {
     BrowserRouter, Switch, Route, Link,
   } from 'react-router-dom';
@@ -16,7 +20,7 @@ class Flipcoin extends React.Component {
     state = {
        result:'',
     }
-    flip = () => this.setState(({result}) => ({result :(Math.floor(Math.random()>0.5)===0 ?'heads' : 'tail')}));
+    flip = () => this.setState(({result}) => ({result :(Math.floor(Math.random()>0.5)===0 ?<img src={head} alt=""/> : <img src={tail} alt=""/>)}));
   render() {
       const {result} = this.state;
     return (

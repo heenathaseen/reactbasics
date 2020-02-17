@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
 
-const Hooksbasic = () => (
-  <>
-    <HooksCounter />
-    <HooksName />
-    <HooksToggle />
-    <HooksForm />
-  </>
-);
 
 const HooksCounter = ({ title }) => {
   const [count, setCount] = useState(0);
@@ -70,7 +62,7 @@ const HooksToggle = () => {
   );
 };
 
-// Custon Hooks
+
 export const useInputValue = (val) => {
   const [value, setValue] = useState(val);
 
@@ -112,4 +104,12 @@ const HooksForm = () => {
   );
 };
 
+const Hooksbasic = () => (
+  <>
+    <HooksCounter />
+    <HooksName />
+    <HooksToggle />
+    <HooksForm />
+  </>
+);
 export default Hooksbasic;
