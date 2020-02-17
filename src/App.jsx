@@ -20,6 +20,7 @@ import Localstorage from './Localstorage';
 import Redux from './Redux';
 import Mobx from './Mobx';
 import Flipcoin from './Flipcoin';
+import Hooksbasic from './Hooksbasics';
 
 const menu = ['home',
   'color',
@@ -38,7 +39,8 @@ const menu = ['home',
   'localStorage',
   'redux',
   'mobx',
-  'flipcoin'];
+  'flipcoin',
+  'hooksbasics'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -88,6 +90,7 @@ class App extends React.Component {
           <Route exact path="/mobx" component={Mobx} />
           <Route exact path="/flipcoin" component={Flipcoin} />
           <Route exact path="/flipcoin" component={Flipcoin} />
+          <Route exact path="/hooksbasics" component={Hooksbasic} />
 
 
         </Switch>
