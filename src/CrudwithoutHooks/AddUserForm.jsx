@@ -39,10 +39,9 @@ class AddUserForm extends Component {
         <label>Username</label>
         <input
           type="text"
-          name="username"
+          name="name"
           value={this.state.username}
-          onChange={this.handleInputChange}
-        />
+          onChange={this.handleInputChange}/>
         <button type="submit">Add new user</button>
       </form>
     );

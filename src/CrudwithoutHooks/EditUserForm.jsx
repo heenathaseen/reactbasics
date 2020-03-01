@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 class EditUserForm extends Component {
-  // Lifecycle
   static getDerivedStateFromProps(nextProps, prevState) {
     if (prevState.user !== nextProps.currentUser) {
       return {
@@ -11,7 +10,6 @@ class EditUserForm extends Component {
   }
 
   state = {
-    // user: { id: null, name: "", username: "" }
     user: this.props.currentUser
   };
 

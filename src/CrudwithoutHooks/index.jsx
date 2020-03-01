@@ -48,6 +48,13 @@ class CrudWoHooks extends Component {
       users: this.state.users.map(user => (user.id === id ? updatedUser : user))
     });
   };
+ 
+
+  setEditing = ed => {
+    this.setState({
+      editing: ed
+    });
+  };
 
   render() {
     const { editing, users, currentuser } = this.state;

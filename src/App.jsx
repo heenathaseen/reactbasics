@@ -23,6 +23,7 @@ import Flipcoin from './Flipcoin';
 import Hooksbasic from './Hooksbasics';
 import Hooksfetch from './Hooksfetch';
 import CrudWoHooks from './CrudwithoutHooks';
+import CrudwithHooks from './CrudwithHooks';
 
 
 const menu = ['home',
@@ -45,7 +46,8 @@ const menu = ['home',
   'flipcoin',
   'hooksbasics',
   'hooksfetch',
-  'crudwithouthooks'];
+  'crudwithouthooks',
+  'crudwithhooks'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -98,6 +100,7 @@ class App extends React.Component {
           <Route exact path="/hooksbasics" component={Hooksbasic} />
           <Route exact path="/hooksfetch" component={Hooksfetch} />
           <Route exact path="/crudwithouthooks" component={CrudWoHooks} />
+          <Route exact path="/crudwithhooks" component={CrudwithHooks} />
 
 
         </Switch>
