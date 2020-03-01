@@ -22,6 +22,8 @@ import Mobx from './Mobx';
 import Flipcoin from './Flipcoin';
 import Hooksbasic from './Hooksbasics';
 import Hooksfetch from './Hooksfetch';
+import CrudWoHooks from './CrudwithoutHooks';
+
 
 const menu = ['home',
   'color',
@@ -42,7 +44,8 @@ const menu = ['home',
   'mobx',
   'flipcoin',
   'hooksbasics',
-  'hooksfetch'];
+  'hooksfetch',
+  'crudwithouthooks'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -94,6 +97,7 @@ class App extends React.Component {
           <Route exact path="/flipcoin" component={Flipcoin} />
           <Route exact path="/hooksbasics" component={Hooksbasic} />
           <Route exact path="/hooksfetch" component={Hooksfetch} />
+          <Route exact path="/crudwithouthooks" component={CrudWoHooks} />
 
 
         </Switch>
