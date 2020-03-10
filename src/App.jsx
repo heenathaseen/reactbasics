@@ -26,6 +26,7 @@ import CrudWoHooks from './CrudwithoutHooks';
 import CrudwithHooks from './CrudwithHooks';
 import LifeCycle from './LifeCycle';
 import Proptypes  from './PropTypes';
+import CompoWrap from './CompoWrap';
 
 
 const menu = ['home',
@@ -51,7 +52,8 @@ const menu = ['home',
   'crudwithouthooks',
   'crudwithhooks',
   'lifecycle',
-  'proptypes'];
+  'proptypes',
+'componentswrap'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -107,6 +109,8 @@ class App extends React.Component {
           <Route exact path="/crudwithhooks" component={CrudwithHooks} />
           <Route exact path="/lifecycle" component={LifeCycle} />
           <Route exact path="/proptypes" component={Proptypes} />
+          <Route exact path="/componentswrap" component={CompoWrap} />
+
 
 
        </Switch>
