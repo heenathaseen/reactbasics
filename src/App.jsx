@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter, Switch, Route, Link,
+  BrowserRouter, Switch, Route, Link,useParams
 } from 'react-router-dom';
 import './App.scss';
 import Colors from './Colors';
@@ -27,6 +27,7 @@ import CrudwithHooks from './CrudwithHooks';
 import LifeCycle from './LifeCycle';
 import Proptypes  from './PropTypes';
 import CompoWrap from './CompoWrap';
+import CheckBox from './CheckBox';
 
 
 const menu = ['home',
@@ -53,7 +54,8 @@ const menu = ['home',
   'crudwithhooks',
   'lifecycle',
   'proptypes',
-'componentswrap'];
+'componentswrap',
+'checkbox'];
 
 const Navigation = ({ menus }) => (
   <div className="navigation">
@@ -74,6 +76,36 @@ const Color = () => (
     <Colors color="Pink" />
     <Colors color="purple" />
   </div>
+);
+const ArticlePost = () => {
+  const { articlepost } = useParams();
+  return (
+    <>
+      <Switch>
+        <Route path=":articlepost" />
+      </Switch>
+      <h2>Article: {articlepost}</h2>
+    </>
+  );
+};
+
+const articlePostData = [
+  { id: 4, title: "Article Four", url: "article-four" },
+  { id: 5, title: "Article Five", url: "article-five" },
+  { id: 6, title: "Article Six", url: "article-six" }
+];
+
+const BlogPost = () => (
+  <>
+    <h3>Blog Post</h3>
+    <ul>
+      {articlePostData.map(a => (
+        <li key={a.id} style={{ float: "none" }}>
+          <Link to={`/${a.url}`}>{a.title}</Link>
+        </li>
+      ))}
+    </ul>
+  </>
 );
 
 
@@ -110,9 +142,10 @@ class App extends React.Component {
           <Route exact path="/lifecycle" component={LifeCycle} />
           <Route exact path="/proptypes" component={Proptypes} />
           <Route exact path="/componentswrap" component={CompoWrap} />
+          <Route exact path="/checkbox" component={CheckBox} />
 
-
-
+          <Route path="/blogpost" component={BlogPost} />
+          <Route path="/:articlepost" component={ArticlePost} />
        </Switch>
       </BrowserRouter>
 
